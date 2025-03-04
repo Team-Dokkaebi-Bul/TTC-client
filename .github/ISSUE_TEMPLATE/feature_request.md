@@ -1,13 +1,9 @@
 ---
 name: Feature Request
-about: Suggest an idea for this project
+about: 새로운 기능을 추가할 때 생성하는 이슈입니다.
 title: "[Feature] "
-labels: 
+labels: enhancement
 assignees: username
 ---
 ## 작업 내용
-- 
-## 테스트 방법
-- 
-## 기타 사항
 - 
