@@ -418,7 +418,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EQUIP
+  m_Text: 'MAIN
+
+    EQUIP'
 --- !u!222 &1621452664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -566,7 +568,7 @@ GameObject:
   - component: {fileID: 1949251917}
   - component: {fileID: 1949251916}
   m_Layer: 5
-  m_Name: EquipButton
+  m_Name: MainEquipButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
