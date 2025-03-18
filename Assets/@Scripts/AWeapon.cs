@@ -7,6 +7,7 @@ public enum EWeaponType
 
 public enum EWeaponProp
 {
+    Normal
 };
 
 public class AWeapon
@@ -15,7 +16,7 @@ public class AWeapon
     private EWeaponType _type;
     private EWeaponProp _prop;
 
-    public void InitiateWeapon(in int id, in EWeaponType type, in EWeaponProp prop)
+    public AWeapon(in int id, in EWeaponType type, in EWeaponProp prop)
     {
         _id = id;
         _type = type;
