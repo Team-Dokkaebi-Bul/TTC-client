@@ -7,6 +7,7 @@ public class TestWeaponManager : MonoBehaviour
     public Button subEquipButton;
     public Button mainUnequipButton;
     public Button subUnequipButton;
+    public Button swapButton;
     public Text text;
 
     public Weapon weapon;
@@ -18,6 +19,7 @@ public class TestWeaponManager : MonoBehaviour
         subEquipButton.onClick.AddListener(EquipSubWeaponFromButton);
         mainUnequipButton.onClick.AddListener(UnequipMainWeponFromButton);
         subUnequipButton.onClick.AddListener(UnequipSubWeaponFromButton);
+        swapButton.onClick.AddListener(slot.SwapSlot);
     }
 
     private void Update()
