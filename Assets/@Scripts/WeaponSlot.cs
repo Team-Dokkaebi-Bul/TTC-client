@@ -5,7 +5,7 @@ public enum ESlotIndex
     FirstSlot = 0, SecondSlot = 2
 };
 
-public class WeaponSlot
+public class WeaponSlot : MonoBehaviour
 {
     private AWeapon[] _slot = new AWeapon[4];
     private ESlotIndex _currentIndex = ESlotIndex.FirstSlot;
