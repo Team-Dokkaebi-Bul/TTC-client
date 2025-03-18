@@ -9,7 +9,7 @@ public class TestWeaponManager : MonoBehaviour
     public Button subUnequipButton;
     public Text text;
 
-    public AWeapon weapon;
+    public Weapon weapon;
     public WeaponSlot slot;
 
     private void Start()

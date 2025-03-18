@@ -7,12 +7,12 @@ public enum ESlotIndex
 
 public class WeaponSlot : MonoBehaviour
 {
-    private AWeapon[] _slot = new AWeapon[4];
+    private Weapon[] _slot = new Weapon[4];
     private ESlotIndex _currentIndex = ESlotIndex.FirstSlot;
 
-    public AWeapon EquipMainWeapon(in AWeapon weapon)
+    public Weapon EquipMainWeapon(in Weapon weapon)
     {
-        AWeapon heldWeapon = GetCurrentMainWeapon();
+        Weapon heldWeapon = GetCurrentMainWeapon();
 
         if (weapon.GetWeaponType() == EWeaponType.Main || weapon.GetWeaponType() == EWeaponType.Both)
         {
@@ -21,9 +21,9 @@ public class WeaponSlot : MonoBehaviour
         return heldWeapon;
     }
 
-    public AWeapon EquipSubWeapon(in AWeapon weapon)
+    public Weapon EquipSubWeapon(in Weapon weapon)
     {
-        AWeapon heldWeapon = GetCurrentSubWeapon();
+        Weapon heldWeapon = GetCurrentSubWeapon();
 
         if (weapon.GetWeaponType() == EWeaponType.Sub || weapon.GetWeaponType() == EWeaponType.Both)
         {
@@ -32,17 +32,17 @@ public class WeaponSlot : MonoBehaviour
         return heldWeapon;
     }
 
-    public AWeapon UnequipMainWeapon()
+    public Weapon UnequipMainWeapon()
     {
-        AWeapon heldWeapon = _slot[(int)_currentIndex];
+        Weapon heldWeapon = _slot[(int)_currentIndex];
 
         _slot[(int)_currentIndex] = null;
         return heldWeapon;
     }
 
-    public AWeapon UnequipSubWeapon()
+    public Weapon UnequipSubWeapon()
     {
-        AWeapon heldWeapon = _slot[(int)_currentIndex + 1];
+        Weapon heldWeapon = _slot[(int)_currentIndex + 1];
 
         _slot[(int)_currentIndex + 1] = null;
         return heldWeapon;
@@ -53,12 +53,12 @@ public class WeaponSlot : MonoBehaviour
         _currentIndex = _currentIndex == ESlotIndex.FirstSlot ? ESlotIndex.SecondSlot : ESlotIndex.FirstSlot;
     }
 
-    public AWeapon GetCurrentMainWeapon()
+    public Weapon GetCurrentMainWeapon()
     {
         return _slot[(int)_currentIndex];
     }
 
-    public AWeapon GetCurrentSubWeapon()
+    public Weapon GetCurrentSubWeapon()
     {
         return _slot[(int)_currentIndex + 1];
     }

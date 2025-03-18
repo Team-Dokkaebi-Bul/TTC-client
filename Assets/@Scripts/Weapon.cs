@@ -10,7 +10,7 @@ public enum EWeaponProp
     Normal
 };
 
-public class AWeapon : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
     [SerializeField] private int _id;
     [SerializeField] private EWeaponType _type;
