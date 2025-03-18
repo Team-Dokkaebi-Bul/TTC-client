@@ -14,7 +14,7 @@ public class WeaponSlot : MonoBehaviour
     {
         AWeapon heldWeapon = GetCurrentMainWeapon();
 
-        if (weapon.GetWeaponType() == EWeaponType.Main)
+        if (weapon.GetWeaponType() == EWeaponType.Main || weapon.GetWeaponType() == EWeaponType.Both)
         {
             _slot[(int)_currentIndex] = weapon;
         }
@@ -25,7 +25,7 @@ public class WeaponSlot : MonoBehaviour
     {
         AWeapon heldWeapon = GetCurrentSubWeapon();
 
-        if (weapon.GetWeaponType() == EWeaponType.Sub)
+        if (weapon.GetWeaponType() == EWeaponType.Sub || weapon.GetWeaponType() == EWeaponType.Both)
         {
             _slot[(int)_currentIndex + 1] = weapon;
         }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum EWeaponType
 {
-    Main, Sub
+    Both, Main, Sub
 };
 
 public enum EWeaponProp
