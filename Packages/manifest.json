@@ -1,5 +1,9 @@
 {
   "dependencies": {
+    "com.eu4ng.framework.outgame": "https://github.com/E4-Unity/com.eu4ng.framework.outgame.git?path=/package#v0.1.0",
+    "com.eu4ng.manager.data": "https://github.com/E4-Unity/com.eu4ng.manager.data.git?path=/package#v0.1.0",
+    "com.eu4ng.manager.singleton": "https://github.com/E4-Unity/com.eu4ng.manager.singleton.git?path=/package#v0.1.0",
+    "com.eu4ng.utilities": "https://github.com/E4-Unity/com.eu4ng.utilities.git?path=/package#v0.1.0",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",
