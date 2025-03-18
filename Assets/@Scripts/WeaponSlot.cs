@@ -44,7 +44,7 @@ public class WeaponSlot : MonoBehaviour
     {
         AWeapon heldWeapon = _slot[(int)_currentIndex + 1];
 
-        _slot[(int)_currentIndex] = null;
+        _slot[(int)_currentIndex + 1] = null;
         return heldWeapon;
     }
 

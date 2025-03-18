@@ -7,6 +7,7 @@ public class TestWeaponManager : MonoBehaviour
     public Button subEquipButton;
     public Button mainUnequipButton;
     public Button subUnequipButton;
+    public Text text;
 
     public AWeapon weapon;
     public WeaponSlot slot;
@@ -19,18 +20,35 @@ public class TestWeaponManager : MonoBehaviour
         subUnequipButton.onClick.AddListener(UnequipSubWeaponFromButton);
     }
 
+    private void Update()
+    {
+        var mainWeapon = slot.GetCurrentMainWeapon();
+        var subWeapon = slot.GetCurrentSubWeapon();
+        int mainId = 0, subId = 0;
+
+        if (mainWeapon)
+        {
+            mainId = mainWeapon.GetWeaponID();
+        }
+        if (subWeapon)
+        {
+            subId = subWeapon.GetWeaponID();
+        }
+        string message = $"Main : {mainId}\nSub : {subId}";
+        text.text = message;
+    }
+
     private void EquipMainWeaponFromButton()
     {
         Debug.Log($"Try Equip main weapon : {weapon.GetWeaponID()}");
         slot.EquipMainWeapon(weapon);
-        Debug.Log($"Current main weapon : {slot?.GetCurrentMainWeapon().GetWeaponID()}");
+
     }
 
     private void EquipSubWeaponFromButton()
     {
         Debug.Log($"Try Equip sub weapon : {weapon.GetWeaponID()}");
         slot.EquipSubWeapon(weapon);
-        Debug.Log($"Current sub weapon : {slot?.GetCurrentSubWeapon().GetWeaponID()}");
     }
 
     private void UnequipMainWeponFromButton()
@@ -43,9 +61,8 @@ public class TestWeaponManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No held");
+            Debug.Log("Unequiped");
         }
-        Debug.Log($"Current main weapon : {slot.GetCurrentMainWeapon().GetWeaponID()}");
     }
 
     private void UnequipSubWeaponFromButton()
@@ -58,8 +75,7 @@ public class TestWeaponManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("No held");
+            Debug.Log("Unequiped");
         }
-        Debug.Log($"Current main weapon : {slot.GetCurrentSubWeapon().GetWeaponID()}");
     }
 }
