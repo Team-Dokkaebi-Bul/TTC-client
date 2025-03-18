@@ -1,33 +1,36 @@
 using UnityEngine;
 
-public enum EWeaponType
+namespace Weapon
 {
-    Both, Main, Sub
-};
-
-public enum EWeaponProp
-{
-    Normal
-};
-
-public class Weapon : MonoBehaviour
-{
-    [SerializeField] private int _id;
-    [SerializeField] private EWeaponType _type;
-    [SerializeField] private EWeaponProp _prop;
-
-    public int GetWeaponID()
+    public enum EWeaponType
     {
-        return _id;
-    }
+        Both, Main, Sub
+    };
 
-    public EWeaponType GetWeaponType()
+    public enum EWeaponProp
     {
-        return _type;
-    }
+        Normal
+    };
 
-    public EWeaponProp GetWeaponProp()
+    public class Weapon : MonoBehaviour
     {
-        return _prop;
+        [SerializeField] private int _id;
+        [SerializeField] private EWeaponType _type;
+        [SerializeField] private EWeaponProp _prop;
+
+        public int GetWeaponID()
+        {
+            return _id;
+        }
+
+        public EWeaponType GetWeaponType()
+        {
+            return _type;
+        }
+
+        public EWeaponProp GetWeaponProp()
+        {
+            return _prop;
+        }
     }
 }
