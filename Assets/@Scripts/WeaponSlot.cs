@@ -64,5 +64,10 @@ namespace Weapon
         {
             return _slot[(int)_currentIndex + 1];
         }
+
+        public int GetCurrentSlotIndex()
+        {
+            return _currentIndex == ESlotIndex.FirstSlot ? 1 : 2;
+        }
     }
 }

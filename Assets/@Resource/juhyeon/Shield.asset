@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2aa7ed0dda275419efd6f5e8c1c287, type: 3}
   m_Name: Shield
   m_EditorClassIdentifier: 
-  weaponID: 0
-  weaponName: 
-  weaponType: 0
+  weaponID: 2
+  weaponName: Shield
+  weaponType: 2
   weaponProp: 0
+  weaponPrefab: {fileID: 0}

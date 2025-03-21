@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2aa7ed0dda275419efd6f5e8c1c287, type: 3}
   m_Name: Bat
   m_EditorClassIdentifier: 
-  weaponID: 0
-  weaponName: 
+  weaponID: 1
+  weaponName: Bat
   weaponType: 0
   weaponProp: 0
+  weaponPrefab: {fileID: 0}

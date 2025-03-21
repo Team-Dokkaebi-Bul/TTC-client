@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eefcff7579712a4f950a874fdc9f877, type: 3}
   m_Name: WeaponDB
   m_EditorClassIdentifier: 
-  weapons: []
+  weapons:
+  - {fileID: 11400000, guid: 5146ba9158e48f94ca548980bcf9076e, type: 2}
+  - {fileID: 11400000, guid: e9040b087d2976040823efbc4a0abf6d, type: 2}
+  - {fileID: 11400000, guid: 948ab6a3f21816c44bb6cff1cde1bd03, type: 2}
+  - {fileID: 11400000, guid: 2e7f171a10c384c49964d960003191a7, type: 2}
