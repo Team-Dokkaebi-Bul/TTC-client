@@ -7,7 +7,6 @@ namespace Weapon
     public class WeaponManager : MonoBehaviour
     {
         public WeaponDB DB;
-        private WeaponSlot _slot;
 
         #region Test
         public Button mainEquip;
@@ -17,6 +16,7 @@ namespace Weapon
         public Button swap;
         public Text text;
 
+        public WeaponSlot slot;
         public Weapon weapon;
 
         private void Start()
@@ -25,51 +25,46 @@ namespace Weapon
             subEquip.onClick.AddListener(OnEquipSub);
             mainUnequip.onClick.AddListener(OnUnequipMain);
             subUnequip.onClick.AddListener(OnUnequipSub);
-            swap.onClick.AddListener(OnSwap);
-            _slot = GetComponent<WeaponSlot>();
+            swap.onClick.AddListener(slot.SwapSlot);
         }
 
         private void Update()
         {
-            var main = _slot.GetCurrentMainWeapon();
-            var sub = _slot.GetCurrentSubWeapon();
+            var main = slot.GetCurrentMainWeapon();
+            var sub = slot.GetCurrentSubWeapon();
             int mainId = 0, subId = 0;
 
             if (main)
                 mainId = main.GetWeaponID();
             if (sub)
                 subId = sub.GetWeaponID();
-            text.text = $"{_slot.GetCurrentSlotIndex()}\nSlot : Main : {mainId}\nSub : {subId}";
+            text.text = $"{slot.GetCurrentSlotIndex()}\nSlot : Main : {mainId}\nSub : {subId}";
         }
 
         public void OnEquipMain()
         {
             Debug.Log($"Equip main weapon {weapon.GetWeaponID()}");
-            _slot.EquipMainWeapon(weapon);
+            slot.EquipMainWeapon(weapon);
         }
 
         public void OnEquipSub()
         {
             Debug.Log($"Equip sub weapon {weapon.GetWeaponID()}");
-            _slot.EquipSubWeapon(weapon);
+            slot.EquipSubWeapon(weapon);
         }
 
         public void OnUnequipMain()
         {
-            var weapon = _slot.UnequipMainWeapon();
+            var weapon = slot.UnequipMainWeapon();
             if (weapon)
                 Debug.Log($"Unequip main weapon {weapon.GetWeaponID()}");
         }
 
         public void OnUnequipSub()
         {
-            var weapon = _slot.UnequipSubWeapon();
+            var weapon = slot.UnequipSubWeapon();
             if (weapon)
                 Debug.Log($"Unequip main weapon {weapon.GetWeaponID()}");
-        }
-        public void OnSwap()
-        {
-            _slot.SwapSlot();
         }
         #endregion
 

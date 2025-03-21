@@ -16,4 +16,4 @@ MonoBehaviour:
   weaponName: M16
   weaponType: 1
   weaponProp: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 2816673562772190744, guid: 69a2b0d6b3fedd74b83df4c955b46273, type: 3}

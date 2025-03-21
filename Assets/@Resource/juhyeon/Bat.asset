@@ -16,4 +16,4 @@ MonoBehaviour:
   weaponName: Bat
   weaponType: 0
   weaponProp: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 849269631949668022, guid: 3762cf2a97dd1544c8ea3e24e0b7e094, type: 3}

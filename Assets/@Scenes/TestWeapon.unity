@@ -798,6 +798,7 @@ MonoBehaviour:
   subUnequip: {fileID: 143823161}
   swap: {fileID: 1029725040}
   text: {fileID: 1161879327}
+  slot: {fileID: 1992533198}
   weapon: {fileID: 0}
 --- !u!1 &1450021388
 GameObject:
@@ -1251,7 +1252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1992533197}
-  - component: {fileID: 1992533196}
+  - component: {fileID: 1992533198}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1259,18 +1260,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1992533196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992533195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4421edd21043c2346ae83f11268b181b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1992533197
 Transform:
   m_ObjectHideFlags: 0
@@ -1286,6 +1275,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992533198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992533195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4421edd21043c2346ae83f11268b181b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2036703225
 GameObject:
   m_ObjectHideFlags: 0

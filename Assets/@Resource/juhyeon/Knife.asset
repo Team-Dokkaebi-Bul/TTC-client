@@ -16,4 +16,4 @@ MonoBehaviour:
   weaponName: Knife
   weaponType: 0
   weaponProp: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 5516176598402707786, guid: 3d7ecd9852055e94db093c62991c03b0, type: 3}

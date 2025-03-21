@@ -16,4 +16,4 @@ MonoBehaviour:
   weaponName: Shield
   weaponType: 2
   weaponProp: 0
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 6284256694540010619, guid: 0c9c30f23900f4f4198a806a30fc66cd, type: 3}
