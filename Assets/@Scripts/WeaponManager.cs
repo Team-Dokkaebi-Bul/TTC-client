@@ -14,6 +14,7 @@ namespace Weapon
         public Button mainUnequip;
         public Button subUnequip;
         public Button swap;
+        public Button generate;
         public Text text;
 
         public WeaponSlot slot;
@@ -26,6 +27,7 @@ namespace Weapon
             mainUnequip.onClick.AddListener(OnUnequipMain);
             subUnequip.onClick.AddListener(OnUnequipSub);
             swap.onClick.AddListener(slot.SwapSlot);
+            generate.onClick.AddListener(OnGenerate);
         }
 
         private void Update()
@@ -65,6 +67,14 @@ namespace Weapon
             var weapon = slot.UnequipSubWeapon();
             if (weapon)
                 Debug.Log($"Unequip main weapon {weapon.GetWeaponID()}");
+        }
+
+        public void OnGenerate()
+        {
+            int id = Random.Range(1, 4);
+            Weapon weapon = CreateWeapon(id);
+            Debug.Log($"Generate weapon {weapon.GetWeaponID()}");
+            
         }
         #endregion
 
