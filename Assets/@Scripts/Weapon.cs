@@ -16,19 +16,8 @@ namespace Weapon
             _prop = data.weaponProp;
         }
 
-        public int GetWeaponID()
-        {
-            return _id;
-        }
-
-        public EWeaponType GetWeaponType()
-        {
-            return _type;
-        }
-
-        public EWeaponProp GetWeaponProp()
-        {
-            return _prop;
-        }
+        public int GetWeaponID() => _id;
+        public EWeaponType GetWeaponType() => _type;
+        public EWeaponProp GetWeaponProp() => _prop;
     }
 }
