@@ -9,6 +9,13 @@ namespace Weapon
         [SerializeField] private EWeaponType _type;
         [SerializeField] private EWeaponProp _prop;
 
+        public void Initialize(WeaponData data)
+        {
+            _id = data.weaponID;
+            _type = data.weaponType;
+            _prop = data.weaponProp;
+        }
+
         public int GetWeaponID()
         {
             return _id;

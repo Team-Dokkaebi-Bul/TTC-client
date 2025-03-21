@@ -19,5 +19,6 @@ namespace Weapon
         public string weaponName;
         public EWeaponType weaponType;
         public EWeaponProp weaponProp;
+        public GameObject weaponPrefab;
     }
 }
