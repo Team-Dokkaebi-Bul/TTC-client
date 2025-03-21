@@ -2,15 +2,6 @@ using UnityEngine;
 
 namespace Weapon
 {
-    public enum EWeaponType
-    {
-        Both, Main, Sub
-    };
-
-    public enum EWeaponProp
-    {
-        Normal
-    };
 
     public class Weapon : MonoBehaviour
     {
