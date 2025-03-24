@@ -86,13 +86,13 @@ namespace Weapon
             {
                 return null;
             }
-            GameObject newWeapon = Instantiate(data.weaponPrefab, parent);
+            GameObject newWeapon = Instantiate(data.GetWeaponPrefab(), parent);
             Weapon weapon = newWeapon.GetComponent<Weapon>();
             if (weapon == null)
             {
                 weapon = newWeapon.AddComponent<Weapon>();
             }
-            weapon.Initialize(data);
+            weapon.SetData(data);
             return weapon;
         }
     }

@@ -15,10 +15,16 @@ namespace Weapon
     [CreateAssetMenu(fileName = "WeaponData", menuName = "Scriptable Objects/WeaponData")]
     public class WeaponData : ScriptableObject
     {
-        public int weaponID;
-        public string weaponName;
-        public EWeaponType weaponType;
-        public EWeaponProp weaponProp;
-        public GameObject weaponPrefab;
+        [SerializeField] private int weaponID;
+        [SerializeField] private string weaponName;
+        [SerializeField] private EWeaponType weaponType;
+        [SerializeField] private EWeaponProp weaponProp;
+        [SerializeField] private GameObject weaponPrefab;
+
+        public int GetWeaponID() => weaponID;
+        public string GetWeaponName() => weaponName;
+        public EWeaponType GetWeaponType() => weaponType;
+        public EWeaponProp GetWeaponProp() => weaponProp;
+        public GameObject GetWeaponPrefab() => weaponPrefab;
     }
 }

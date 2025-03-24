@@ -5,19 +5,17 @@ namespace Weapon
 
     public class Weapon : MonoBehaviour
     {
-        [SerializeField] private int _id;
-        [SerializeField] private EWeaponType _type;
-        [SerializeField] private EWeaponProp _prop;
+        [SerializeField] private WeaponData _data;
 
-        public void Initialize(WeaponData data)
+        public void SetData(in WeaponData data)
         {
-            _id = data.weaponID;
-            _type = data.weaponType;
-            _prop = data.weaponProp;
+            _data = data;
         }
 
-        public int GetWeaponID() => _id;
-        public EWeaponType GetWeaponType() => _type;
-        public EWeaponProp GetWeaponProp() => _prop;
+        public int GetWeaponID() => _data.GetWeaponID();
+        public string GetWeaponName() => _data.GetWeaponName();
+        public EWeaponType GetWeaponType() => _data.GetWeaponType();
+        public EWeaponProp GetWeaponProp() => _data.GetWeaponProp();
+        public GameObject GetPrefab() => _data.GetWeaponPrefab();
     }
 }

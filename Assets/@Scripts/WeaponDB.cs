@@ -14,12 +14,12 @@ namespace Weapon
             _db = new Dictionary<int, WeaponData>();
             foreach(var weapon in weapons)
             {
-                if (_db.ContainsKey(weapon.weaponID))
+                if (_db.ContainsKey(weapon.GetWeaponID()))
                 {
-                    Debug.Log($"이미 존재하는 ID입니다 : {weapon.weaponID} - {weapon.weaponName}");
+                    Debug.Log($"이미 존재하는 ID입니다 : {weapon.GetWeaponID()} - {weapon.GetWeaponName()}");
                     return;
                 }
-                _db.Add(weapon.weaponID, weapon);
+                _db.Add(weapon.GetWeaponID(), weapon);
             }
         }
 
