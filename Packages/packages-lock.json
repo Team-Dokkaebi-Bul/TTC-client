@@ -303,6 +303,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.workminkyoung.inventory": {
+      "version": "https://github.com/workminkyoung/Inventory.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "fd33f2b8cc1b757b50c4d496773581a7e6da2a36"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
