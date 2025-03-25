@@ -7,6 +7,9 @@ on:
 jobs:
   add_reviewers:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_STEP_DEBUG: true
+      ACTIONS_RUNNER_DEBUG: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
