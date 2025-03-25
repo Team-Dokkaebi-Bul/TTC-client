@@ -1,0 +1,35 @@
+name: random reviewers
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  add_reviewers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: generate_reviewers
+        id: generate_reviewers
+        uses: actions/github-script@v7.0.1
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          script: |
+            const team = ["griiim134", "Eu4ng", "Noong2", "workminkyoung"];
+            const candidate = team.filter((e)) => e != "${{ github.event.pull_request.user.login }}");
+            const reviewer = candidate[Math.floor(Math.random() * candidate.lenght)];
+            const comment = `@${reviewer}님 리뷰 부탁드립니다.`;
+            core.setOutPut("comment", comment);
+            core.setOutPut("reviewer", reviewer);
+      - name: coment PR
+        uses: github-actions-up-and-running/pr-comment@v1.0.1
+        with:
+          message: ${{ steps.generate_reviewers.outputs.comment }}
+          repo-token: ${{ secrets.TOKEN }}
+          repo-token-user-login: "github-actions[bot]"
+      - name: add_reviewers
+        uses: Madrapps/add-reviewers@v1
+        with:
+          reviewers: ${{ steps.generate_reviewer.outputs.reviewer }}
+          token: ${{ secrets.TOKEN }}
