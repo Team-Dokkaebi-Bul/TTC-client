@@ -22,7 +22,7 @@ jobs:
           script: |
             const team = ["griiim134", "Eu4ng", "Noong2", "workminkyoung"];
             const candidate = team.filter((e) => e != "${{ github.event.pull_request.user.login }}");
-            const reviewer = candidate[Math.floor(Math.random() * candidate.lenght)];
+            const reviewer = candidate[Math.floor(Math.random() * candidate.length)];
             const comment = `@${reviewer}님 리뷰 부탁드립니다.`;
             core.setOutput("comment", comment);
             core.setOutput("reviewer", reviewer);
@@ -31,7 +31,6 @@ jobs:
         with:
           message: ${{ steps.generate_reviewers.outputs.comment }}
           repo-token: ${{ secrets.TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
       - name: add_reviewers
         uses: Madrapps/add-reviewers@v1
         with:
