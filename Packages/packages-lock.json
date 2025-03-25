@@ -336,6 +336,13 @@
       },
       "url": "https://packages.unity.com"
     },
+    "juhyeon.griiim134.weapon.system": {
+      "version": "https://github.com/griiim134/com.griiim134.weapon-system.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "07d6f5ecdfca34182353901afabdc90aa804f25a"
+    },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
       "depth": 0,
