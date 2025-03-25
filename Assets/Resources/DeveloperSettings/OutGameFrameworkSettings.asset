@@ -18,6 +18,7 @@ MonoBehaviour:
   m_PromptWidgetPrefab: {fileID: 1547014582698693752, guid: 88a5f0f5da0d6f849b5e02692f98dba1, type: 3}
   m_GlobalStartupWidgetPrefabs: []
   m_SceneWidgetsConfigList:
-  - {fileID: 11400000, guid: 3810f0f2dcfbb3648a4e9a1310f4caec, type: 2}
-  - {fileID: 11400000, guid: 7c06093fafebfe840b02f8462de940b6, type: 2}
+  - {fileID: 11400000, guid: 87b6a2718c63dc54ca19231adf14c458, type: 2}
+  - {fileID: 11400000, guid: 8fe9f41fad78ccb439d040252ba6f2f5, type: 2}
+  - {fileID: 11400000, guid: 605192acb7999864295dc83a0cea9904, type: 2}
   m_LoadingWidgetPrefab: {fileID: 1459459123960302276, guid: 8031c1b62f608da4ab6d5cf690849c2e, type: 3}
