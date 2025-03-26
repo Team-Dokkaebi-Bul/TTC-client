@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e2aa7ed0dda275419efd6f5e8c1c287, type: 3}
-  m_Name: Bayonet
+  m_Name: Assault rifle
   m_EditorClassIdentifier: 
-  _weaponID: 1
-  _weaponName: Bayonet
-  _weaponType: 0
+  _weaponID: 14
+  _weaponName: Assault rifle
+  _weaponType: 1
   _weaponProp: 0
-  _rangeType: 0
-  _weaponPrefab: {fileID: 3476987734307128923, guid: e0edf28aafaa89b4cb9dd607939a56a3, type: 3}
-  _weaponATK: 10
-  _weaponSPD: 7
-  _range: 1.2
-  _crt: 10
+  _rangeType: 1
+  _range: 20
+  _weaponATK: 25
+  _weaponSPD: 8
+  _weaponCTR: 0.2
+  _weaponPrefab: {fileID: 8603097893754509352, guid: 4489074f5733efa409061ec23b4c1555, type: 3}
