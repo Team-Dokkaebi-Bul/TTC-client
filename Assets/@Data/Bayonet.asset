@@ -21,3 +21,4 @@ MonoBehaviour:
   _weaponATK: 10
   _weaponSPD: 7
   _range: 1.2
+  _crt: 10

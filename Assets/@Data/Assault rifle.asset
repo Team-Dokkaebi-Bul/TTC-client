@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2aa7ed0dda275419efd6f5e8c1c287, type: 3}
   m_Name: Assault rifle
   m_EditorClassIdentifier: 
-  _weaponID: 0
-  _weaponName: 
-  _weaponType: 0
+  _weaponID: 14
+  _weaponName: Assault rifle
+  _weaponType: 1
   _weaponProp: 0
-  _rangeType: 0
-  _weaponPrefab: {fileID: 0}
-  _weaponATK: 0
-  _weaponSPD: 0
-  _range: 0
+  _rangeType: 1
+  _weaponPrefab: {fileID: 8603097893754509352, guid: 4489074f5733efa409061ec23b4c1555, type: 3}
+  _weaponATK: 25
+  _weaponSPD: 8
+  _range: 20
+  _crt: 20
