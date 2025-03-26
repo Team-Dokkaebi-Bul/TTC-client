@@ -337,10 +337,11 @@
       "url": "https://packages.unity.com"
     },
     "juhyeon.griiim134.weapon.system": {
-      "version": "file:새 폴더",
+      "version": "https://github.com/griiim134/com.griiim134.weapon-system.git",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "14da6fd19e9821b38b3d6f4b4acbd85b606097f3"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
