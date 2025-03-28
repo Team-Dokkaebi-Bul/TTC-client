@@ -33,6 +33,13 @@
       "dependencies": {},
       "hash": "ecbb50064bd83a7b07c7511cadf3bfb56d3e4a22"
     },
+    "com.griiim134.weapon.system": {
+      "version": "https://github.com/griiim134/com.griiim134.weapon-system.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b8112d1101fcc53ec888125eb5e118e712e617cd"
+    },
     "com.unity.2d.animation": {
       "version": "10.1.4",
       "depth": 1,
