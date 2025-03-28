@@ -37,6 +37,8 @@ public class Player : MonoBehaviour, IPlayer
 
     public void Equip(Item item)
     {
+        if (item.IsNotValid) return;
+        
         RemoveItem(item);
         EquipmentInterface.Equip(item);
         AddStat(item.Definition.GetStat());
@@ -44,6 +46,8 @@ public class Player : MonoBehaviour, IPlayer
 
     public void Unequip(Item item)
     {
+        if (item.IsNotValid) return;
+        
         AddItem(item);
         EquipmentInterface.Unequip(item);
         RemoveStat(item.Definition.GetStat());
