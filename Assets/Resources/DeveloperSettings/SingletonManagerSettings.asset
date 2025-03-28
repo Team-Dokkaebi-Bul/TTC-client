@@ -15,4 +15,5 @@ MonoBehaviour:
   m_GlobalPrefabs:
   - {fileID: 4288041558814862132, guid: b874a8e7f8d32c64b91b98fae237ce82, type: 3}
   - {fileID: 829784435670705442, guid: 6f423523d49d9b04f8eb99b6ff6ccde1, type: 3}
+  - {fileID: 3960695599308228751, guid: 88314ee4416548f458b8dcc45029deee, type: 3}
   m_ScenePrefabsConfig: {fileID: 0}
