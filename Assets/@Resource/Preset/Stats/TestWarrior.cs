@@ -44,6 +44,13 @@ public class TestWarrior : MonoBehaviour
 
         _equippedWeapon = weapon;
         _equippedWeapon.OnEquip(this);
+
+        var mastery = GetComponent<WeaponMasteryComponent>();
+        if (mastery != null)
+        {
+            mastery.OnWeaponEquipped(weapon);
+        }
+
         Debug.Log("플레이어가 무기를 장착함.");
     }
 
@@ -52,6 +59,13 @@ public class TestWarrior : MonoBehaviour
         if (_equippedWeapon != null)
         {
             _equippedWeapon.OnUnequip();
+
+            var mastery = GetComponent<WeaponMasteryComponent>();
+            if (mastery != null)
+            {
+                mastery.OnWeaponUnequipped();
+            }
+
             _equippedWeapon = null;
         }
         Debug.Log("플레이어가 무기를 해제함.");
@@ -65,13 +79,18 @@ public class TestWarrior : MonoBehaviour
         }
         else
         {
-            // 테스트용: 주변에서 무기 찾기
             var weapon = Object.FindFirstObjectByType<WeaponItem>();
             if (weapon != null)
             {
                 EquipWeapon(weapon);
             }
         }
+    }
+
+    // 무기 반환 메서드 추가
+    public WeaponItem GetEquippedWeapon()
+    {
+        return _equippedWeapon;
     }
     #endregion
 
@@ -90,22 +109,25 @@ public class TestWarrior : MonoBehaviour
     #region Damage Handling
     public void BeAttacked(float damage, StatModifier modifier)
     {
+        // 상태이상 효과 처리
         if (modifier != null)
         {
             _currentModifier = modifier;
             _currentModifier.Apply();
         }
 
+        // 데미지 처리
         float currentHealth = GetHealth();
         float newHealth = currentHealth - damage;
         _stats.SetStatValue("Health", newHealth);
 
         // UI 업데이트
         UpdateHealthBarUI();
-        UpdateStatWindowUI();
+        UpdateStatWindowUI();  // 스탯창도 업데이트
 
         Debug.Log($"플레이어가 {damage}의 데미지를 받았습니다. 남은 체력: {newHealth}");
 
+        // 사망 처리
         if (newHealth <= 0)
         {
             OnDeath();

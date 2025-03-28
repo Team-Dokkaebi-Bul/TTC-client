@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Weapon;
 
 public class WeaponItem : MonoBehaviour
 {
     #region Fields
     [SerializeField] private StatComponent _weaponStats;
     [SerializeField] private SkillComponent _weaponSkills;
+    [SerializeField] private WeaponClass _weaponClass;  // 무기 타입
     private TestWarrior _equippedPlayer;
     private List<StatModifier> _activeModifiers = new();
     #endregion
@@ -59,6 +61,12 @@ public class WeaponItem : MonoBehaviour
         _equippedPlayer = null;
         Debug.Log($"[{gameObject.name}] 장착 해제됨");
     }
+
+    // 무기 타입 반환
+    public WeaponClass GetWeaponClass()
+    {
+        return _weaponClass;
+    }
     #endregion
 
     #region Private Methods
@@ -66,6 +74,7 @@ public class WeaponItem : MonoBehaviour
     {
         if (_equippedPlayer == null) return;
 
+        // 무기의 모든 스탯을 플레이어에게 적용
         var weaponStats = _weaponStats.GetAllStats();
         foreach (var stat in weaponStats)
         {
@@ -81,6 +90,7 @@ public class WeaponItem : MonoBehaviour
     {
         if (_equippedPlayer == null) return;
 
+        // 모든 활성 수정자 제거
         foreach (var modifier in _activeModifiers)
         {
             modifier.Remove();
