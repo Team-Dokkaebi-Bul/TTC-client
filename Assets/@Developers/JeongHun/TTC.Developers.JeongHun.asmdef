@@ -1,0 +1,19 @@
+{
+    "name": "TTC.Developers.JeongHun",
+    "rootNamespace": "Eu4ng.Framework.Platformer",
+    "references": [
+        "GUID:6ebc61a948085e64fb3662bdc27fc9fb",
+        "GUID:c2becb15332ef2145b3d7c2149f8e3cb",
+        "GUID:01fd9bb70fa9e6b43915abd56be24d29",
+        "GUID:e5a7c4f3f23dccc4a92e30675973b963"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
