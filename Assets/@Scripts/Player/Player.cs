@@ -1,4 +1,5 @@
 using Eu4ng.Utilities;
+using Unity.VisualScripting;
 using UnityEngine;
 using Weapon;
 
@@ -56,4 +57,15 @@ public class Player : MonoBehaviour, IPlayer
     public void AddStat(IStat stat) => StatInterface.AddStat(stat);
 
     public void RemoveStat(IStat stat) => StatInterface.RemoveStat(stat);
+    
+    /* MonoBehaviour */
+
+    // TODO 테스트 코드이므로 제거하거나 별도의 컴포넌트로 분리가 필요
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
+    {
+        IInteractable InteractableInterface = collision.gameObject.GetComponent<IInteractable>();
+        if(InteractableInterface == null) return;
+        
+        InteractableInterface.Interact(this);
+    }
 }
