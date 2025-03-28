@@ -336,11 +336,21 @@
       },
       "url": "https://packages.unity.com"
     },
-    "juhyeon.griiim134.weapon.system": {
-      "version": "file:새 폴더",
+    "juhyeon.griiim134.creature.ai.system": {
+      "version": "https://github.com/griiim134/Juhyeon.CreatureAISystem.git",
       "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {
+        "DongEun.StatSystem": "0.1.0"
+      },
+      "hash": "d255959bc051d613ff8c8d865ff3b96d9b05fc31"
+    },
+    "juhyeon.griiim134.weapon.system": {
+      "version": "https://github.com/griiim134/com.griiim134.weapon-system.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5d704cb137d44fa8a13ea5ebda68842db4681b54"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
