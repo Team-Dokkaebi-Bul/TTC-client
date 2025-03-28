@@ -1,6 +1,11 @@
 using Eu4ng.Utilities;
 using UnityEngine;
+using Weapon;
 
+/// <summary>
+/// 플레이어 캐릭터 컨테이너 클래스
+/// </summary>
+[RequireComponent(typeof(StatComponent), typeof(WeaponSlot))]
 public class Player : MonoBehaviour, IPlayer
 {
     [SerializeField, ReadOnly] PlayerData m_PlayerData;
