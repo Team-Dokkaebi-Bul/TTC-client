@@ -57,7 +57,25 @@ public class Player : MonoBehaviour, IPlayer
     public void AddStat(IStat stat) => StatInterface.AddStat(stat);
 
     public void RemoveStat(IStat stat) => StatInterface.RemoveStat(stat);
-    
+
+    public void AttackByMainWeapon()
+    {
+        var weaponSlot = GetComponent<WeaponSlot>();
+        var weapon = weaponSlot.GetCurrentMainWeapon();
+        var skill = weapon.GetComponent<ISkill>();
+        skill.Attack(StatInterface);
+    }
+
+    public void AttackBySubWeapon()
+    {
+        var weaponSlot = GetComponent<WeaponSlot>();
+        var weapon = weaponSlot.GetCurrentSubWeapon();
+        var skill = weapon.GetComponent<ISkill>();
+        skill.Attack(StatInterface);
+    }
+
+    public void Damaged(IStatModifier modifier) => StatInterface.Damaged(modifier);
+
     /* MonoBehaviour */
 
     // TODO 테스트 코드이므로 제거하거나 별도의 컴포넌트로 분리가 필요
