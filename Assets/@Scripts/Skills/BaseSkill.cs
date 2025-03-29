@@ -1,7 +1,6 @@
 using UnityEngine;
-using System.Collections;
 
-public abstract class BaseSkill : MonoBehaviour, ISkill
+public abstract class BaseSkill : MonoBehaviour
 {
     #region Fields
     [SerializeField] protected float _cooldownTime;
