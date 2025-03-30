@@ -58,18 +58,10 @@ public class Player : MonoBehaviour, IPlayer
 
     public void RemoveStat(IStat stat) => StatInterface.RemoveStat(stat);
 
-    public void AttackByMainWeapon()
+    public void Attack(EWeaponCategory targetCategory)
     {
-        var weaponSlot = GetComponent<WeaponSlot>();
-        var weapon = weaponSlot.GetCurrentMainWeapon();
-        var skill = weapon.GetComponent<ISkill>();
-        skill.Attack(StatInterface);
-    }
-
-    public void AttackBySubWeapon()
-    {
-        var weaponSlot = GetComponent<WeaponSlot>();
-        var weapon = weaponSlot.GetCurrentSubWeapon();
+        var weaponSet = GetComponent<EquipmentComponent>();
+        var weapon = weaponSet.HeldedWeapon(targetCategory);
         var skill = weapon.GetComponent<ISkill>();
         skill.Attack(StatInterface);
     }
