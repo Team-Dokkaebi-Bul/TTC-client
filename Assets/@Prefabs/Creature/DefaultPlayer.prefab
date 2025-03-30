@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 1140169780599858042}
   - component: {fileID: 4302547443218718181}
   - component: {fileID: 5061880307544594689}
-  - component: {fileID: 7047252084628706052}
   - component: {fileID: 1211730297585770558}
+  - component: {fileID: 5632093863756441834}
   m_Layer: 10
   m_Name: DefaultPlayer
   m_TagString: Player
@@ -212,19 +212,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7047252084628706052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4461456467479239704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb01bac71b29ec24aa295cf81ee919b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _statPreset: {fileID: 11400000, guid: 444ec820d9b586b469cf87fe99d63fda, type: 2}
 --- !u!114 &1211730297585770558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +224,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a3d7a51f316d34cb52b549e5dca4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5632093863756441834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4461456467479239704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01bac71b29ec24aa295cf81ee919b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialStats:
+  - definition: {fileID: 11400000, guid: 9e80bac439780b04dbcd95be47d776a5, type: 2}
+    baseValue: 100
+  - definition: {fileID: 11400000, guid: 3b4a7741ab7df77488ed94254973a9a9, type: 2}
+    baseValue: 10
+  - definition: {fileID: 11400000, guid: 9e432990acbaae04cb8f556a5a5162d2, type: 2}
+    baseValue: 10
+  - definition: {fileID: 11400000, guid: 73ff71c16d472d944adbe22bb8303e33, type: 2}
+    baseValue: 10
+  - definition: {fileID: 11400000, guid: 7be960425ddaeeb46a65902eed4a4d4f, type: 2}
+    baseValue: 10

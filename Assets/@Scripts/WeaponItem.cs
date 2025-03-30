@@ -76,9 +76,11 @@ public class WeaponItem : MonoBehaviour
 
         // 무기의 모든 스탯을 플레이어에게 적용
         var weaponStats = _weaponStats.GetAllStats();
+        var playerStatComponent = _equippedPlayer.GetStatComponent();
+        
         foreach (var stat in weaponStats)
         {
-            var modifier = new StatModifier(stat.Key, ModifierType.Flat, stat.Value, _equippedPlayer.GetComponent<StatComponent>());
+            var modifier = new StatModifier(stat.Key, ModifierType.Flat, stat.Value, playerStatComponent);
             _activeModifiers.Add(modifier);
             modifier.Apply();
         }

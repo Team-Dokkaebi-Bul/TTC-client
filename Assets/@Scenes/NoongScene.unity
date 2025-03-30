@@ -1671,6 +1671,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 546472310}
   m_SourcePrefab: {fileID: 100100000, guid: 9b7acd6f603a5954d90479ef897547e3, type: 3}
+--- !u!114 &827981517 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8140978850502180980, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
+  m_PrefabInstance: {fileID: 1640482108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01bac71b29ec24aa295cf81ee919b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &837429473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2108880536908049345, guid: 9b7acd6f603a5954d90479ef897547e3, type: 3}
@@ -2816,6 +2827,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon
       objectReference: {fileID: 0}
+    - target: {fileID: 8140978850502180980, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
+      propertyPath: _initialStats.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140978850502180980, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
+      propertyPath: _initialStats.Array.data[0].baseValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140978850502180980, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
+      propertyPath: _initialStats.Array.data[1].baseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140978850502180980, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
+      propertyPath: _initialStats.Array.data[0].definition
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b4a7741ab7df77488ed94254973a9a9, type: 2}
+    - target: {fileID: 8140978850502180980, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
+      propertyPath: _initialStats.Array.data[1].definition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e432990acbaae04cb8f556a5a5162d2, type: 2}
     - target: {fileID: 8153111418962324817, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
       propertyPath: _weaponClass
       value: 1
@@ -2823,7 +2854,7 @@ PrefabInstance:
     - target: {fileID: 8153111418962324817, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
       propertyPath: _weaponStats
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 827981517}
     - target: {fileID: 8153111418962324817, guid: dbaeea73b96210b46b067a6d86f3e1c8, type: 3}
       propertyPath: _weaponSkills
       value: 
