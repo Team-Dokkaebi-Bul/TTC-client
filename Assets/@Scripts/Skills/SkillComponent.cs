@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class SkillComponent : MonoBehaviour
+public class SkillComponent : MonoBehaviour, ISkillComponent
 {
     #region Fields
     [System.Serializable]

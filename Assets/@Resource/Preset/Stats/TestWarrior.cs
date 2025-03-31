@@ -109,7 +109,7 @@ public class TestWarrior : MonoBehaviour
     {
         // 새로 추가한 GetStatDefinition 메서드를 사용
         var healthDef = _stats.GetStatDefinition("Health");
-        return healthDef != null ? healthDef.maxValue : 100f; // 없을 경우 기본값 100 사용
+        return healthDef != null ? healthDef.MaxValue : 100f; // 없을 경우 기본값 100 사용
     }
     
     // 스탯 컴포넌트 직접 접근 메서드 추가

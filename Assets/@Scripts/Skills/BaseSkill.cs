@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class BaseSkill : MonoBehaviour
+public abstract class BaseSkill : MonoBehaviour, ISkill
 {
     #region Fields
     [SerializeField] protected float _cooldownTime;
@@ -14,6 +14,7 @@ public abstract class BaseSkill : MonoBehaviour
     #endregion
 
     #region Properties
+    public bool IsEnabled => _isEnabled;
     public bool CanUse => !_isExecuting && _currentCooldown <= 0;
     public float Cooldown => _currentCooldown;
     public float CooldownTime => _cooldownTime;

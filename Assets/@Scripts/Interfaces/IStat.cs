@@ -1,4 +1,8 @@
 public interface IStat
 {
-    // TODO
+    string StatName { get; }
+    string Description { get; }
+    float DefaultValue { get; }
+    float MinValue { get; }
+    float MaxValue { get; }
 }

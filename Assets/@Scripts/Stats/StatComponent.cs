@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// 스탯을 관리하는 컴포넌트입니다.
 /// 게임 오브젝트에 부착하여 스탯 기능을 제공합니다.
 /// </summary>
-public class StatComponent : MonoBehaviour
+public class StatComponent : MonoBehaviour, IStatComponent
 {
     #region Internal Classes
     [Serializable]
@@ -66,7 +66,7 @@ public class StatComponent : MonoBehaviour
     }
     #endregion
 
-    #region Stat Access
+    #region IStatComponent 인터페이스 구현
     public bool HasStat(string statName) => _stats.ContainsKey(statName);
     
     public float GetStatValue(string statName)
@@ -95,8 +95,7 @@ public class StatComponent : MonoBehaviour
         }
     }
     
-    // 스탯 정의 정보 가져오기
-    public StatDefinitionSO GetStatDefinition(string statName)
+    public IStat GetStatDefinition(string statName)
     {
         if (_stats.TryGetValue(statName, out var stat))
         {
@@ -117,36 +116,60 @@ public class StatComponent : MonoBehaviour
         return allStats;
     }
     
-    public void AddStat(StatDefinitionSO definition, float initialValue = float.MinValue)
+    public void AddStat(IStat stat, float initialValue = float.MinValue)
     {
-        if (definition == null) return;
+        if (stat == null) return;
         
-        string statName = definition.statName;
+        string statName = stat.StatName;
+        
         if (!_stats.ContainsKey(statName))
         {
-            float value = initialValue != float.MinValue ? initialValue : definition.defaultValue;
+            // IStat을 StatDefinitionSO로 형변환 시도
+            StatDefinitionSO definitionSO = stat as StatDefinitionSO;
+            
+            if (definitionSO == null)
+            {
+                Debug.LogWarning($"AddStat: 지원되지 않는 IStat 타입입니다: {stat.GetType()}");
+                return;
+            }
+            
+            // 초기값이 지정되었으면 사용, 아니면 기본값 사용
+            float value = initialValue != float.MinValue ? initialValue : stat.DefaultValue;
             
             var newStatData = new StatData
             {
-                definition = definition,
+                definition = definitionSO,
                 baseValue = value
             };
             
             _stats[statName] = newStatData;
+            Debug.Log($"[{gameObject.name}] 스탯 추가: {statName} = {value}");
         }
     }
     
-    // 스탯 제거 메서드
-    public bool RemoveStat(string statName)
+    public void RemoveStat(IStat stat)
     {
+        if (stat == null) return;
+        
+        string statName = stat.StatName;
         if (_stats.ContainsKey(statName))
         {
             _stats.Remove(statName);
-            return true;
+            Debug.Log($"[{gameObject.name}] 스탯 제거: {statName}");
         }
-        
-        Debug.LogWarning($"제거할 스탯 {statName}을(를) 찾을 수 없음: {gameObject.name}");
-        return false;
+        else
+        {
+            Debug.LogWarning($"제거할 스탯 {statName}을(를) 찾을 수 없음: {gameObject.name}");
+        }
+    }
+    
+    public void Damaged(IStatModifier modifier)
+    {
+        if (modifier != null)
+        {
+            modifier.Apply();
+            Debug.Log($"[{gameObject.name}] 스탯 수정자 적용됨");
+        }
     }
     #endregion
 } 

@@ -5,8 +5,8 @@ using Weapon;
 public class WeaponItem : MonoBehaviour
 {
     #region Fields
-    [SerializeField] private StatComponent _weaponStats;
-    [SerializeField] private SkillComponent _weaponSkills;
+    [SerializeField] private IStatComponent _weaponStats;
+    [SerializeField] private ISkillComponent _weaponSkills;
     [SerializeField] private WeaponClass _weaponClass;  // 무기 타입
     private TestWarrior _equippedPlayer;
     private List<StatModifier> _activeModifiers = new();
@@ -17,20 +17,20 @@ public class WeaponItem : MonoBehaviour
     {
         if (_weaponStats == null)
         {
-            _weaponStats = GetComponent<StatComponent>();
+            _weaponStats = GetComponent<IStatComponent>();
             if (_weaponStats == null)
             {
-                Debug.LogError($"StatComponent가 {gameObject.name}에 없습니다!");
+                Debug.LogError($"IStatComponent가 {gameObject.name}에 없습니다!");
                 return;
             }
         }
 
         if (_weaponSkills == null)
         {
-            _weaponSkills = GetComponent<SkillComponent>();
+            _weaponSkills = GetComponent<ISkillComponent>();
             if (_weaponSkills == null)
             {
-                Debug.LogError($"SkillComponent가 {gameObject.name}에 없습니다!");
+                Debug.LogError($"ISkillComponent가 {gameObject.name}에 없습니다!");
                 return;
             }
         }
@@ -80,9 +80,13 @@ public class WeaponItem : MonoBehaviour
         
         foreach (var stat in weaponStats)
         {
-            var modifier = new StatModifier(stat.Key, ModifierType.Flat, stat.Value, playerStatComponent);
-            _activeModifiers.Add(modifier);
-            modifier.Apply();
+            var statDefinition = _weaponStats.GetStatDefinition(stat.Key);
+            if (statDefinition != null)
+            {
+                var modifier = new StatModifier(stat.Key, ModifierType.Flat, stat.Value, playerStatComponent);
+                _activeModifiers.Add(modifier);
+                modifier.Apply();
+            }
         }
 
         _equippedPlayer.UpdateStatWindowUI();
