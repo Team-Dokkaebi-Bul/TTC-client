@@ -5,10 +5,15 @@ using UnityEngine;
 public class ItemDefinition : ScriptableObject
 {
     public IStat GetStat() => null;
-    
+
+    [SerializeField] int m_ID;
+    [SerializeField] string m_DisplayName;
     [SerializeField] List<ItemConfig> m_ItemConfigs = new List<ItemConfig>();
     
     protected List<ItemConfig> ItemConfigs => m_ItemConfigs;
+    
+    public int ID => m_ID;
+    public string DisplayName => m_DisplayName;
 
     public T GetItemConfig<T>() where T : ItemConfig
     {
