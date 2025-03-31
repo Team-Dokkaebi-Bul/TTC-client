@@ -1,9 +1,11 @@
 {
   "dependencies": {
-    "com.eu4ng.framework.outgame": "https://github.com/E4-Unity/com.eu4ng.framework.outgame.git?path=/package#v0.1.0",
+    "com.eu4ng.framework.outgame": "https://github.com/E4-Unity/com.eu4ng.framework.outgame.git?path=/package#v0.1.1",
     "com.eu4ng.manager.data": "https://github.com/E4-Unity/com.eu4ng.manager.data.git?path=/package#v0.1.0",
+    "com.eu4ng.manager.input": "https://github.com/E4-Unity/com.eu4ng.manager.input.git?path=/package#v0.1.0",
     "com.eu4ng.manager.singleton": "https://github.com/E4-Unity/com.eu4ng.manager.singleton.git?path=/package#v0.1.0",
     "com.eu4ng.utilities": "https://github.com/E4-Unity/com.eu4ng.utilities.git?path=/package#v0.1.0",
+    "com.juhyeon.weapon.system": "https://github.com/griiim134/com.griiim134.weapon-system.git",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",
@@ -15,7 +17,6 @@
     "com.unity.timeline": "1.8.7",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.5",
-    "com.juhyeon.weapon.system": "https://github.com/griiim134/com.griiim134.weapon-system.git",
     "com.workminkyoung.inventory": "https://github.com/workminkyoung/Inventory.git",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
