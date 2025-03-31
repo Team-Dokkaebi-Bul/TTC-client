@@ -10,11 +10,13 @@ using Juhyeon.Weapon.System;
 public class Player : MonoBehaviour, IPlayer
 {
     [SerializeField, ReadOnly] PlayerData m_PlayerData;
-    
+
+    private EquipmentComponent _equipmentComponent;
+
     /* Properties */
 
     public IInventoryComponent InventoryInterface => null;
-    public IEquipmentComponent EquipmentInterface => null;
+    public IEquipmentComponent EquipmentInterface => _equipmentComponent;
     public IStatComponent StatInterface => null;
     
     public virtual void Initialize(PlayerData NewPlayerData)
@@ -36,22 +38,32 @@ public class Player : MonoBehaviour, IPlayer
 
     public void RemoveItem(Item item) => InventoryInterface.RemoveItem(item);
 
-    public void Equip(Item item)
+    public void Equip(in Weapon weapon, in EWeaponCategory targetCategory)
     {
-        if (item.IsNotValid) return;
-        
-        RemoveItem(item);
-        EquipmentInterface.Equip(item);
+        if (weapon.IsNotValid) return;
+
+        RemoveItem(weapon);
+        EquipmentInterface.Equip(weapon, targetCategory);
         AddStat(item.Definition.GetStat());
     }
 
-    public void Unequip(Item item)
+    public void Unequip(in Weapon weapon, in EWeaponCategory targetCategory)
     {
-        if (item.IsNotValid) return;
-        
-        AddItem(item);
-        EquipmentInterface.Unequip(item);
+        if (weapon.IsNotValid) return;
+
+        AddItem(weapon);
+        EquipmentInterface.Unequip(weapon, targetCategory);
         RemoveStat(item.Definition.GetStat());
+    }
+
+    public void Swap()
+    {
+        EquipmentInterface.Swap();
+    }
+
+    public Weapon HasWeapon(in EWeaponCategory targetCategory)
+    {
+        return EquipmentInterface.HasWeapon(targetCategory);
     }
 
     public void AddStat(IStat stat) => StatInterface.AddStat(stat);
@@ -61,7 +73,7 @@ public class Player : MonoBehaviour, IPlayer
     public void Attack(EWeaponCategory targetCategory)
     {
         var weaponSet = GetComponent<EquipmentComponent>();
-        var weapon = weaponSet.HeldedWeapon(targetCategory);
+        var weapon = weaponSet.HasWeapon(targetCategory);
         var skill = weapon.GetComponent<ISkill>();
         skill.Attack(StatInterface);
     }

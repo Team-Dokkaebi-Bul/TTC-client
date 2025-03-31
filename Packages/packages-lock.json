@@ -34,11 +34,10 @@
       "hash": "ecbb50064bd83a7b07c7511cadf3bfb56d3e4a22"
     },
     "com.juhyeon.weapon.system": {
-      "version": "https://github.com/griiim134/com.griiim134.weapon-system.git",
+      "version": "file:com.juhyeon.weapon.system",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "5c27b5a07a2e6900f19ad5e8ece673eaee04d95c"
+      "source": "embedded",
+      "dependencies": {}
     },
     "com.unity.2d.animation": {
       "version": "10.1.4",
