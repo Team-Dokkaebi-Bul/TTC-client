@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456d3023b8b58d444b936841eede79e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DB: {fileID: 11400000, guid: 919fb27190258464e8abd2191743b4b6, type: 2}
+  DB: {fileID: 11400000, guid: d0d9eeb47d041b648a42bd59d801d2ca, type: 2}
   mainEquip: {fileID: 1949251916}
   subEquip: {fileID: 1235118915}
   mainUnequip: {fileID: 2036703227}
