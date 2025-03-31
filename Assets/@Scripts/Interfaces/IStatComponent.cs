@@ -1,6 +1,18 @@
+using System.Collections.Generic;
+
 public interface IStatComponent
 {
-    void AddStat(IStat stat);
+    bool HasStat(string statName);
+
+    float GetStatValue(string statName);
+
+    void SetStatValue(string statName, float value);
+
+    IStat GetStatDefinition(string statName);
+
+    Dictionary<string, float> GetAllStats();
+
+    void AddStat(IStat stat, float initialValue = float.MinValue);
     
     void RemoveStat(IStat stat);
 

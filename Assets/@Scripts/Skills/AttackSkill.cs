@@ -51,6 +51,20 @@ public class AttackSkill : BaseSkill
         _animator.SetTrigger(IsAttacking);
 
         StartCoroutine(AttackRoutine());
+
+        // 무기 사용 시 숙련도 증가
+        if (_owner != null)
+        {
+            WeaponItem weapon = _owner.GetEquippedWeapon();
+            if (weapon != null)
+            {
+                var mastery = _owner.GetComponent<WeaponMasteryComponent>();
+                if (mastery != null)
+                {
+                    mastery.IncreaseMastery(weapon.GetWeaponClass(), 0.1f);
+                }
+            }
+        }
     }
     #endregion
 
@@ -88,7 +102,7 @@ public class AttackSkill : BaseSkill
     }
     #endregion
 
-    #region Gizmos
+    #region Attack Range Gizmos
     private void OnDrawGizmos()
     {
         DrawAttackRange(Color.gray);

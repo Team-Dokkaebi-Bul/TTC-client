@@ -1,4 +1,14 @@
+using UnityEngine;
+
 public interface ISkill
 {
-    void Attack(IStatComponent stat); // 스킬 모션 실행 + 공격력 계산 + 몬스터에게 넘겨주기
-}
+    bool IsEnabled { get; }
+    bool CanUse { get; }
+    float Cooldown { get; }
+    float CooldownTime { get; }
+    
+    void Enable(TestWarrior owner);
+    void Disable();
+    void SetCooldownTime(float cooldownTime);
+    void Execute();
+} 
