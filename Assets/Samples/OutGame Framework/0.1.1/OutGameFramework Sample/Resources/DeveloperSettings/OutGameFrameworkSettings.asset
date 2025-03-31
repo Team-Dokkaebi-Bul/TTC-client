@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1a8bd9b0da3084481e269658d37e37, type: 3}
+  m_Name: OutGameFrameworkSettings
+  m_EditorClassIdentifier: 
+  m_OptionsWidget: {fileID: 9000029195722245389, guid: 055517f36377f3c49a8b03192199c9a3, type: 3}
+  m_AlertWidgetPrefab: {fileID: 1547014582698693752, guid: 9fbaca77e4ea3c44298c1810cca99859, type: 3}
+  m_ConfirmWidgetPrefab: {fileID: 1547014582698693752, guid: 47027e5d25505414f9c4bd46f90fa83a, type: 3}
+  m_PromptWidgetPrefab: {fileID: 1547014582698693752, guid: 88a5f0f5da0d6f849b5e02692f98dba1, type: 3}
+  m_GlobalStartupWidgetPrefabs: []
+  m_SceneWidgetsConfigList:
+  - {fileID: 11400000, guid: 3810f0f2dcfbb3648a4e9a1310f4caec, type: 2}
+  - {fileID: 11400000, guid: 7c06093fafebfe840b02f8462de940b6, type: 2}
+  m_LoadingWidgetPrefab: {fileID: 1459459123960302276, guid: 8031c1b62f608da4ab6d5cf690849c2e, type: 3}
