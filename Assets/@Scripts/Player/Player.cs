@@ -2,7 +2,6 @@ using Eu4ng.Utilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using Juhyeon.Weapon.System;
-using Weapon;
 using System.Collections.Generic;
 
 /// <summary>
@@ -77,8 +76,8 @@ public class Player : MonoBehaviour, IPlayer
 
     public void AttackByMainWeapon()
     {
-        var weaponSlot = GetComponent<WeaponSlot>();
-        var weapon = weaponSlot.GetCurrentMainWeapon();
+        var weaponSlot = GetComponent<EquipmentComponent>();
+        var weapon = weaponSlot.HasWeapon(EWeaponCategory.Main);
         //var skill = weapon.GetComponent<ISkill>();
         //skill.Attack(StatInterface);
     }
@@ -109,9 +108,6 @@ public class Player : MonoBehaviour, IPlayer
     public Dictionary<string, float> GetAllStats() => StatInterface.GetAllStats();
     
     public void AddStat(IStat stat, float initialValue = float.MinValue) => StatInterface.AddStat(stat, initialValue);
-
-    public void RemoveStat(IStat stat) => StatInterface.RemoveStat(stat);
-        
     #endregion
     
 
