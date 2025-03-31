@@ -42,18 +42,18 @@ public class Player : MonoBehaviour, IPlayer
     {
         if (weapon.IsNotValid) return;
 
-        RemoveItem(weapon);
+        //RemoveItem(weapon);
         EquipmentInterface.Equip(weapon, targetCategory);
-        AddStat(item.Definition.GetStat());
+        //AddStat(item.Definition.GetStat());
     }
 
     public void Unequip(in Weapon weapon, in EWeaponCategory targetCategory)
     {
         if (weapon.IsNotValid) return;
 
-        AddItem(weapon);
+        //AddItem(weapon);
         EquipmentInterface.Unequip(weapon, targetCategory);
-        RemoveStat(item.Definition.GetStat());
+        //RemoveStat(item.Definition.GetStat());
     }
 
     public void Swap()
