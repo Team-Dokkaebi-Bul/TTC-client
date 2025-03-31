@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "com.eu4ng.framework.game": {
+      "version": "https://github.com/E4-Unity/com.eu4ng.framework.game.git?path=/package#v0.1.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.eu4ng.utilities": "https://github.com/E4-Unity/com.eu4ng.utilities.git?path=/package#v0.1.1",
+        "com.eu4ng.manager.singleton": "https://github.com/E4-Unity/com.eu4ng.manager.singleton.git?path=/package#v0.1.0"
+      },
+      "hash": "692b47ab50d83a3e02e6a48b27d992f093ba6d87"
+    },
     "com.eu4ng.framework.outgame": {
       "version": "https://github.com/E4-Unity/com.eu4ng.framework.outgame.git?path=/package#v0.1.1",
       "depth": 0,
@@ -35,11 +45,11 @@
       "hash": "9f60c230f3c4fac95b3c244bd53666624b205a6f"
     },
     "com.eu4ng.utilities": {
-      "version": "https://github.com/E4-Unity/com.eu4ng.utilities.git?path=/package#v0.1.0",
+      "version": "https://github.com/E4-Unity/com.eu4ng.utilities.git?path=/package#v0.1.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "ecbb50064bd83a7b07c7511cadf3bfb56d3e4a22"
+      "hash": "63e3b96f0f3b41d8e9fc33cd39519f200e784bfe"
     },
     "com.juhyeon.weapon.system": {
       "version": "https://github.com/griiim134/com.griiim134.weapon-system.git",
