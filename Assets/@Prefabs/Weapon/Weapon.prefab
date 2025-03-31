@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8746083484376981377}
-  - component: {fileID: 7885107820123292315}
   - component: {fileID: 8153111418962324817}
+  - component: {fileID: 719118524161700481}
+  - component: {fileID: 8140978850502180980}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -33,19 +34,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7885107820123292315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2745708101219070071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b71bd5818a86dda4f963112f87c6ebe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _statPreset: {fileID: 11400000, guid: a421dfa12d749054d877da620ea5ab1e, type: 2}
 --- !u!114 &8153111418962324817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,4 +46,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa22dce84701604ab50c52cd573b0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponStats: {fileID: 7885107820123292315}
+  _weaponStats: {fileID: 0}
+  _weaponSkills: {fileID: 719118524161700481}
+--- !u!114 &719118524161700481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745708101219070071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731083b16fd796c46afcd45c425bca66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillBindings:
+  - skillPrefab: {fileID: 7656070759939935948, guid: 259b0099e157af64084e8cabd96ebb16, type: 3}
+    activeSkill: {fileID: 0}
+    keyCode: 97
+    cooldownTime: 0.5
+  - skillPrefab: {fileID: 8309417319013715196, guid: 35d7eea7cf263f947b051ddd999cca4a, type: 3}
+    activeSkill: {fileID: 0}
+    keyCode: 115
+    cooldownTime: 1
+  - skillPrefab: {fileID: 1940551757552337363, guid: b969cc13c5a9e2c4984c81dac4ece67d, type: 3}
+    activeSkill: {fileID: 0}
+    keyCode: 100
+    cooldownTime: 1
+--- !u!114 &8140978850502180980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745708101219070071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb01bac71b29ec24aa295cf81ee919b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _statPreset: {fileID: 11400000, guid: a421dfa12d749054d877da620ea5ab1e, type: 2}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Creature
 {
@@ -24,23 +25,29 @@ namespace Creature
         public float attackRange;
         public bool isAttack = false;
 
-        public StatPresetSO preset;
-        //public StatModifierPresetSO modifierPreset;
+        // StatComponent 참조
+        [SerializeField] protected StatComponent _stat;
 
         public StatModifier currentModifier => _currentModifier;
         #endregion
 
         #region Components
-        protected StatComponent _stat;
         protected BehaviourComponenet _bahaviour;
         #endregion
 
         #region Methods
         protected void InitCreature(in float damage, in float attackRange = 0f)
         {
-            _stat = gameObject.AddComponent<StatComponent>();
+            if (_stat == null)
+            {
+                _stat = GetComponent<StatComponent>();
+                if (_stat == null)
+                {
+                    _stat = gameObject.AddComponent<StatComponent>();
+                }
+            }
+            
             _bahaviour = gameObject.AddComponent<BehaviourComponenet>();
-            _stat.SetStatPreset(preset);
             
             this.damage = damage;
             this.attackRange = attackRange;
