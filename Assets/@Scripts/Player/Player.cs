@@ -1,17 +1,19 @@
 using Eu4ng.Utilities;
 using Unity.VisualScripting;
 using UnityEngine;
+using Juhyeon.Weapon.System;
 using Weapon;
 using System.Collections.Generic;
 
 /// <summary>
 /// 플레이어 캐릭터 컨테이너 클래스
 /// </summary>
-[RequireComponent(typeof(StatComponent), typeof(WeaponSlot))]
+[RequireComponent(typeof(StatComponent), typeof(EquipmentComponent))]
 public class Player : MonoBehaviour, IPlayer
 {
     [SerializeField, ReadOnly] PlayerData m_PlayerData;
-    
+
+    private EquipmentComponent _equipmentComponent;   
     // 스탯 컴포넌트 참조
     private StatComponent _statComponent;
     
@@ -45,22 +47,32 @@ public class Player : MonoBehaviour, IPlayer
 
     public void RemoveItem(Item item) => InventoryInterface.RemoveItem(item);
 
-    public void Equip(Item item)
+    public void Equip(in Weapon weapon, in EWeaponCategory targetCategory)
     {
-        if (item.IsNotValid) return;
-        
-        RemoveItem(item);
-        EquipmentInterface.Equip(item);
-        AddStat(item.Definition.GetStat());
+        if (weapon.IsNotValid) return;
+
+        //RemoveItem(weapon);
+        EquipmentInterface.Equip(weapon, targetCategory);
+        //AddStat(item.Definition.GetStat());
     }
 
-    public void Unequip(Item item)
+    public void Unequip(in Weapon weapon, in EWeaponCategory targetCategory)
     {
-        if (item.IsNotValid) return;
-        
-        AddItem(item);
-        EquipmentInterface.Unequip(item);
-        RemoveStat(item.Definition.GetStat());
+        if (weapon.IsNotValid) return;
+
+        //AddItem(weapon);
+        EquipmentInterface.Unequip(weapon, targetCategory);
+        //RemoveStat(item.Definition.GetStat());
+    }
+
+    public void Swap()
+    {
+        EquipmentInterface.Swap();
+    }
+
+    public Weapon HasWeapon(in EWeaponCategory targetCategory)
+    {
+        return EquipmentInterface.HasWeapon(targetCategory);
     }
 
     public void AttackByMainWeapon()
@@ -71,10 +83,14 @@ public class Player : MonoBehaviour, IPlayer
         //skill.Attack(StatInterface);
     }
 
-    public void AttackBySubWeapon()
+    public void AddStat(IStat stat) => StatInterface.AddStat(stat);
+
+    public void RemoveStat(IStat stat) => StatInterface.RemoveStat(stat);
+
+    public void Attack(EWeaponCategory targetCategory)
     {
-        var weaponSlot = GetComponent<WeaponSlot>();
-        var weapon = weaponSlot.GetCurrentSubWeapon();
+        var weaponSet = GetComponent<EquipmentComponent>();
+        var weapon = weaponSet.HasWeapon(targetCategory);
         //var skill = weapon.GetComponent<ISkill>();
         //skill.Attack(StatInterface);
     }
