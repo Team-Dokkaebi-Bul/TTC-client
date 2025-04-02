@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5bb9dd6852fac42a22c64034ba4532, type: 3}
+  m_Name: ItemDefinition_2
+  m_EditorClassIdentifier: 
+  <ID>k__BackingField: 2
+  <DisplayName>k__BackingField: Sample 02
+  <ItemConfigs>k__BackingField:
+  - {fileID: 7079989700557759598}
+--- !u!114 &7079989700557759598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cb1e692d7fda540bbc0b4f7540347d, type: 3}
+  m_Name: ItemConfig_Inventory_2
+  m_EditorClassIdentifier: 
+  <Data>k__BackingField:
+    <MaxStack>k__BackingField: 10
+    <TestValue>k__BackingField: 0

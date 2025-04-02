@@ -1,0 +1,17 @@
+{
+    "name": "Eu4ng.System.Inventory.Sample",
+    "rootNamespace": "Eu4ng.System.Inventory.Sample",
+    "references": [
+        "GUID:464f6c32d7dec504c97b0c85c8e110c8",
+        "GUID:97a1adbd79c277d4798dc637e4404815"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
