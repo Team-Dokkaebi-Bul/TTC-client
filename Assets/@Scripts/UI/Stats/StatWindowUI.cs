@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Noong2.StatSystem;
+
 
 /// <summary>
 /// 캐릭터의 전체 스탯을 표시하는 창 UI

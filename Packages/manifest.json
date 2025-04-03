@@ -6,6 +6,7 @@
     "com.eu4ng.manager.singleton": "https://github.com/E4-Unity/com.eu4ng.manager.singleton.git?path=/package#v0.1.0",
     "com.eu4ng.utilities": "https://github.com/E4-Unity/com.eu4ng.utilities.git?path=/package#v0.1.0",
     "com.juhyeon.weapon.system": "https://github.com/griiim134/com.griiim134.weapon-system.git",
+    "com.noong2.statsystem": "https://github.com/Noong2/StatSystem.git",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",

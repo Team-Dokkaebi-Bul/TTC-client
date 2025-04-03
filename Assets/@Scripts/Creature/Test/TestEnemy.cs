@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using Noong2.StatSystem;
+
 
 namespace Creature
 {

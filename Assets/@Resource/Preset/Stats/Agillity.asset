@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fb566a5d01544945ae2de3a4e5e14d2, type: 3}
-  m_Name: Luck
+  m_Script: {fileID: 11500000, guid: ca5f3e58de00ed74daa2e299f76c77b4, type: 3}
+  m_Name: Agillity
   m_EditorClassIdentifier: 
-  statName: Luck
-  description: "\uC6B4"
+  statName: Agillity
+  description: "\uBBFC\uCCA9"
   defaultValue: 10
   minValue: 0
   maxValue: 100

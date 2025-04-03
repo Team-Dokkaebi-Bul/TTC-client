@@ -3,6 +3,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Juhyeon.Weapon.System;
 using System.Collections.Generic;
+using Noong2.StatSystem;
+
 
 /// <summary>
 /// 플레이어 캐릭터 컨테이너 클래스

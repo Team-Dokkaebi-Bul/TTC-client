@@ -48,6 +48,13 @@
       "dependencies": {},
       "hash": "77282242f4313414e835388232487f22c4f66a3b"
     },
+    "com.noong2.statsystem": {
+      "version": "https://github.com/Noong2/StatSystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "eeb0f9ceff0fda3cf5be508be04b382700db5b39"
+    },
     "com.unity.2d.animation": {
       "version": "10.1.4",
       "depth": 1,

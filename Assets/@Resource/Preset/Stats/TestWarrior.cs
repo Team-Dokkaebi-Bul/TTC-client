@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Text;
+using Noong2.StatSystem;
+
 
 public class TestWarrior : MonoBehaviour
 {

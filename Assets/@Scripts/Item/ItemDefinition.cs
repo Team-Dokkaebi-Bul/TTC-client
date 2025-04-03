@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Noong2.StatSystem;
+
 
 [CreateAssetMenu(fileName = "ItemDefinition", menuName = "Scriptable Objects/ItemDefinition")]
 public class ItemDefinition : ScriptableObject

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Threading;
 using UnityEngine;
+using Noong2.StatSystem;
+
 
 namespace Creature
 {

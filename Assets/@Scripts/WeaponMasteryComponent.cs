@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Noong2.StatSystem;
+
 
 public class WeaponMasteryComponent : MonoBehaviour
 {

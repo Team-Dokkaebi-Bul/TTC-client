@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Noong2.StatSystem;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
