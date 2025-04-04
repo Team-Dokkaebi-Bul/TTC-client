@@ -1,0 +1,18 @@
+{
+  "1": {
+    "DisplayName": "Sample 01",
+    "MaxStack": 5
+  },
+  "2": {
+    "DisplayName": "Sample 02",
+    "MaxStack": 10
+  },
+  "3": {
+    "DisplayName": "Sample 03",
+    "MaxStack": 15
+  },
+  "4": {
+    "DisplayName": "Sample 04",
+    "MaxStack": 20
+  }
+}

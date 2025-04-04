@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2667e587b79fb4e4a8aac5d47d985455, type: 3}
+  m_Name: TTCItemDatabase
+  m_EditorClassIdentifier: 
+  <FolderPath>k__BackingField: Assets/Resources/ItemDefinitions
+  <JsonFile>k__BackingField: {fileID: 4900000, guid: a89fa89fdbb400e4b8ae40974be4a517, type: 3}
+  <ItemDefinitions>k__BackingField:
+  - {fileID: 11400000, guid: 3e4906f57f857634cabde0330e914137, type: 2}
+  - {fileID: 11400000, guid: a79144cb578699c48b2ff465441f21d5, type: 2}
+  - {fileID: 11400000, guid: 77c99be7c8af21a479009618bb6ff386, type: 2}
+  - {fileID: 11400000, guid: e48c7c3bcf53f5b4ca12b6d2d943c2a8, type: 2}

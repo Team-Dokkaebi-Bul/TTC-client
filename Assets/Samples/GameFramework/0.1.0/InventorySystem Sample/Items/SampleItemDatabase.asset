@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566e38b8155cf964c80e6d66e02d179d, type: 3}
+  m_Name: SampleItemDatabase
+  m_EditorClassIdentifier: 
+  <FolderPath>k__BackingField: Assets/SamplesInventorySystem/Items
+  <JsonFile>k__BackingField: {fileID: 4900000, guid: 628821be7068650408a2cbf4305c42e1, type: 3}
+  <ItemDefinitions>k__BackingField:
+  - {fileID: 11400000, guid: 9e54183fa39a1e64f9306fdd257a0f29, type: 2}
+  - {fileID: 11400000, guid: 1bf5d66a5f072ee44b4820f77d289fc7, type: 2}
+  - {fileID: 11400000, guid: a17256392bfda1b428beef14c7aa680d, type: 2}
+  - {fileID: 11400000, guid: 8da840aa569eac64abd16126fddb5657, type: 2}
